@@ -62,9 +62,7 @@ def get_senti(review,sentiment={},opi={}): ## Get the aspect terms, opinions and
                         if child.dep_=="neg":
                             senti = senti*(-1)
                             opinion = child.text + " " + opinion
-                    if (token.head.text in opinions) and ("CCONJ" in [child.dep_ for child in token.head.children]):
-                        senti = senti*1.5
-                    ## Consider the conjuntion words, for example, "tasty and delicious"
+                    
                     if token.pos_ == "NOUN": ## When the sentiment word is a noun
                         for child in token.head.children:
                             if (child.pos_=="NOUN") and (child.text != token.text):
@@ -76,6 +74,8 @@ def get_senti(review,sentiment={},opi={}): ## Get the aspect terms, opinions and
                                 as_senti(term,senti,sentiment)
                                 as_opinion(term,opinion,opi)
                     ## All the other cases when then sentiment word is neither a noun nor a verb
+                    
+                    ## Adv or adj
                     for child in token.head.children:
                         if child.pos_=="NOUN":
                             term = child.text
@@ -84,6 +84,25 @@ def get_senti(review,sentiment={},opi={}): ## Get the aspect terms, opinions and
                                     term = sub_child.text + " " + term
                             as_senti(term,senti,sentiment)
                             as_opinion(term,opinion,opi)
+                    ## Consider the conjuntion words, for example, "tasty and delicious"
+                    if (token.head.text in opinions) and ("cc" in [child.dep_ for child in token.head.children]):
+                        senti = senti*0.5 ## Give a penalty prevent from rating too high
+                        if token.head.head.pos_=="NOUN":
+                            term = token.head.head.text
+                            for sub_child in child.head.children:
+                                if sub_child.dep_ == "compound":
+                                    term = sub_child.text + " " + term
+                            as_senti(term,senti,sentiment)
+                            as_opinion(term,opinion,opi)
+                        else:
+                            for sub_child in toen.head.head.children:
+                                if sub_child.pos_ == "NOUN":
+                                    term=sub_child.text
+                                    for sub_sub_child in sub_child.children:
+                                        if sub_sub_child.dep_ == "compound":
+                                            term = sub_child.text + " " + term
+                                    as_senti(term,senti,sentiment)
+                                    as_opinion(term,opinion,opi)
             else: ## CASE 2: The review sentence does not have noun, eg., "Taste delicious"
                 for child in token.children:
                     if (child.dep_ == "advmod" or child.dep_ =="amod") and (child.text in intensifiers):
@@ -103,7 +122,7 @@ def get_senti(review,sentiment={},opi={}): ## Get the aspect terms, opinions and
 if __name__ == "__main__":
     senti_score={}
     opi={}
-    review2="The soup itself was basic and came with 4 decent sized wontons, nice and hot."
+    review="This was my first time here and i decided to order the shrimp wonton soup. The soup itself was basic and came with 4 decent sized wontons, nice and hot. They also have a self serve tea section."
     get_senti(review,senti_score,opi)
     
                             
