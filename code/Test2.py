@@ -33,8 +33,8 @@ cat_word['negative']=[]
 
 with open("word_output_new.csv", "a", newline='', encoding="utf-8") as file1:
     fieldnames = ["business_id",  "positive","negative"]
-    writer1 = csv.DictWriter(file1, fieldnames=fieldnames)
-    writer1.writerow(fieldnames)
+    writer = csv.writer(file1, delimiter=',')
+    writer.writerow(fieldnames)
     for business in df["business_id"]:
         if business != change:
             writer1 = csv.DictWriter(file1, fieldnames=fieldnames)
