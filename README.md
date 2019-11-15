@@ -1,4 +1,4 @@
-# STAT628-TUE-G1   Module 3  
+# STAT628-TUE-G1   Module 3   Based on Yelp Reviews 
 Authors: XINKAI CHEN, WENBO FEI, GUANQI LU, LOKESWAR SADASIVUNI  
 
 # Structure:
@@ -18,5 +18,7 @@ Some images we produced.
 
 ## report  
 The final jupyternotebook report.
+
+## Shiny
 
 ### Readme in each folder will describe the necessary details.
