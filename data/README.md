@@ -1,4 +1,4 @@
-The original data files too large, therefore we upload them to the google drive. (The Chineses_canada_reviews10 and tips_chinese_canada are two examples that are not so large to upload here. )  
+The original data files too large, therefore we upload them to the google drive. (The Chineses_canada_reviews10 and tips_canada_chinese are two examples that are not so large to upload here. )  
 
 ## The data files in this foler are mainly from the codes output:   
 Score_output —— The score from sentimental analysis.Adding the reviews count and stars for all businesses.  
