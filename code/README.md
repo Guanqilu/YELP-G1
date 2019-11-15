@@ -1,5 +1,7 @@
 
-This folder contains all the codes used in our analysis
+This folder contains all the codes used in our analysis.
+
+The txt files are some words we used in our code.
 
 For the user tring to run the codes here for the first time, please ensure you have installed the spaCy and en_core_web_lg.
 
