@@ -4,8 +4,19 @@ XINKAI CHEN, WENBO FEI, GUANQI LU, LOKESWAR SADASIVUNI
 # Structure:
 Our repository contains several folders:
 
-## code
+## code   
+The code we used in the project.
+
 ## data
-## slides
+The dataset we produced from the raw json.  
+
+## slides  
+Two slides for two presentations.
+
 ## image
-## report
+Some images we produced.
+
+## report  
+The final jupyternotebook report.
+
+### Readme in each folder will describe the necessary details.
