@@ -22,6 +22,6 @@ The final jupyternotebook report.
 ## Shiny
 https://ericchenzhang.shinyapps.io/yelp/    
 
-![image](http://github.com/Guanqilu/YELP-G1/image/shiny_examples.png)  
+![image](https://github.com/Guanqilu/YELP-G1/blob/master/image/shiny_examples.png)  
 
 ### Readme in each folder will describe the necessary details.
