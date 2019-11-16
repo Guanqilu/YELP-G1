@@ -2,7 +2,8 @@
 Authors: XINKAI CHEN, WENBO FEI, GUANQI LU, LOKESWAR SADASIVUNI  
 
 # Structure:
-Our repository contains several folders:
+Our repository contains several folders.  
+### Readme in each folder will describe the necessary details.
 
 ## code   
 The code we used in the project.
@@ -24,4 +25,4 @@ https://ericchenzhang.shinyapps.io/yelp/
 
 ![image](https://github.com/Guanqilu/YELP-G1/blob/master/image/shiny_examples.png)  
 
-### Readme in each folder will describe the necessary details.
+
