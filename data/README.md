@@ -1,4 +1,6 @@
-The original data files too large, therefore we upload them to the google drive. (The Chineses_canada_reviews10 and tips_canada_chinese are two examples that are not so large to upload here. )  
+**Raw dataset "json" files are from https://www.yelp.com/dataset/, they are too large to be upload on Github.**
+
+The Chineses_canada_reviews10.csv and tips_canada_chinese.csv are two examples that are not so large to upload here.  
 
 ## The data files in this foler are mainly from the codes output:   
 Score_output —— The score from sentimente analysis.Adding the reviews count and stars for all businesses.  
