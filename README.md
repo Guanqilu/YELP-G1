@@ -21,7 +21,8 @@ Some images we produced.
 The final jupyternotebook report.
 
 ## Shiny
-https://ericchenzhang.shinyapps.io/yelp/    
+https://ericchenzhang.shinyapps.io/yelp/   
+here is only one part of our shiny:
 
 ![image](https://github.com/Guanqilu/YELP-G1/blob/master/image/shiny_examples.png)  
 
